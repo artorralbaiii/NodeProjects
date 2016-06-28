@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+	<title>Angular JS Form Validation</title>
+</head>
+<body ng-controller="MainCtrl as main">
+	<form name="frmProfile" novalidate >
+		<table border="1px">
+			<tr>
+				<th>Validation Type</th>
+				<th>Label</th>
+				<th>Field</th>
+				<th>Validation Status</th>
+			</tr>
+
+			<tr>
+				<td>Required</td>
+				<td>Fullname:</td>
+				<td><input type="text" name="fullname" ng-model="user.fullname" required/></td>
+				<td><p ng-show="frmProfile.fullname.$error.required && main.submitted">Fullname is required!</p></td>
+			</tr>
+			<tr>
+				<td>Min:5 | Max 10</td>
+				<td>Username:</td>
+				<td><input type="text" name="username" ng-model="user.username" required ng-minlength="5" ng-maxlength="10" /></td>
+				<td><p ng-show="frmProfile.username.$error.required && main.submitted">Username is required!</p>
+				<p ng-show="frmProfile.username.$error.minlength  && main.submitted">Username is too short!</p>
+				<p ng-show="frmProfile.username.$error.maxlength && main.submitted">Username is too long!</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>Email:</td>
+				<td><input type="email" name="email" ng-model="user.email" required /></td>
+				<td><p ng-show="frmProfile.email.$invalid  && main.submitted">Enter a valid email!</p></td>
+			</tr>
+			<tr>
+				<td span="4"><button ng-click="main.submitData(frmProfile.$valid);">Submit</button> </td>
+				<p>{{ctr}}</p>
+			</tr>
+		</table>
+	</form>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="angular_modules.js"></script>
+			  
+</html>

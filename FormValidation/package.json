@@ -1,0 +1,9 @@
+{
+	"name" : "Angular_JS_Form_Validation",
+	"version" : "1.0.0",
+	"description" : "Angular JS Form Validation",
+	"main" : "server.js",
+	"dependencies" : {
+		"express" : "^4.13.4"
+	}
+}

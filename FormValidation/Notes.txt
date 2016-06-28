@@ -1,0 +1,13 @@
+These are the available parameters for an Angular input to create validation rules. Read the Angular input directive for more information.    
+
+
+    <input
+       ng-model="{ string }"
+       name="{ string }"
+       required
+       ng-required="{ boolean }"
+       ng-minlength="{ number }"
+       ng-maxlength="{ number }"
+       ng-pattern="{ string }"
+       ng-change="{ string }">
+    </input>
