@@ -1,0 +1,7 @@
+{
+  "name": "TypeAhead",
+  "version": "1.0.0",
+  "description": "Bootsrap UI TypeAhead",
+  "main": "server.js",
+  "dependencies": {}
+}

@@ -1,0 +1,7 @@
+1. bower init
+2. bower install bootstrap
+3. bower install angular-bootstrap 
+
+<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="/angular/angular.min.js"></script>
+<script src="/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>

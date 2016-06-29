@@ -1,0 +1,19 @@
+{
+  "name": "TypeAhead",
+  "description": "Bootsrap UI TypeAhead",
+  "main": "server.js",
+  "authors": [
+    "Jong Torralba <a.r.torralba.iii@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
