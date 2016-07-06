@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 var app = angular.module('myApp',['ui.bootstrap','ui.select','ngSanitize']);
 
 app.controller('MainCtrl', function(DataService, $http) {
+=======
+var app = angular.module('myApp', ['ui.bootstrap','ui.select', 'ngSanitize']);
+
+app.controller('MainCtrl', function(DataService, $scope) {
+>>>>>>> 5c22a861c884074350f9f88b513776b21dac0366
 	var vm = this;
 	vm.states	 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 	vm.disabled = undefined;
@@ -18,6 +24,7 @@ app.controller('MainCtrl', function(DataService, $http) {
 			});
 		});
 	}
+<<<<<<< HEAD
 
 
   vm.address = {};
@@ -28,6 +35,8 @@ app.controller('MainCtrl', function(DataService, $http) {
   	];
   }
 
+=======
+>>>>>>> 5c22a861c884074350f9f88b513776b21dac0366
 });
 
 app.factory('DataService',function($http){
