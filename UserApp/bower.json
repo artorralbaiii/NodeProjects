@@ -1,0 +1,27 @@
+{
+  "name": "user_app",
+  "description": "Sample User Maintenance",
+  "main": "app.js",
+  "authors": [
+    "a.r.torralba.iii@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/artorralbaiii/NodeProjects",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-grid": "^3.2.1",
+    "angular": "^1.5.7",
+    "angular-bootstrap": "^1.3.3",
+    "angular-ui-select": "^0.18.0",
+    "angular-sanitize": "^1.5.7",
+    "jquery": "^3.0.0"
+  }
+}
