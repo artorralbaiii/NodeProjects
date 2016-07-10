@@ -33,14 +33,14 @@ var sessionMiddleware = session({
 	})
 });
 
+app.use(sessionMiddleware);
+
 var api = require('./app/routes/api.js')(app, express);
 app.use('/api', api);
 
 app.get('*', function(req, res){
 	res.sendFile(__dirname + '/public/app/views/index.html');
 });
-
-app.use(sessionMiddleware);
 
 app.listen(config.port, '0.0.0.0', function(){
 	console.log('Application Server on port : ' + config.port );
