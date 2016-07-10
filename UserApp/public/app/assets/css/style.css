@@ -1,0 +1,21 @@
+/*GENERAL CSS*/
+body, html {
+	padding: 0px;
+	margin: 0px;
+	font-family: 
+}
+
+.form-warning {
+	color: #FF0000;
+	font-style: italic;
+	font-size: 12px;
+}
+
+/*Login Page CSS*/
+
+.login-screen {
+	margin-top: 15px;
+	border: 1px solid #CCCCCC;
+	padding: 15px;
+}
+
