@@ -44,6 +44,7 @@ module.exports = {
 				if(err) {
 					res.json({
 						success : false,
+						errorType : 'GENERIC_ERR',
 						message : err.message
 					});
 				} else {
@@ -56,18 +57,21 @@ module.exports = {
 								req.session.user = user;
 								res.json({
 									success: true,
-									message : 'Authenticated.'
+									message : 'Authenticated.',
+									id : user._id
 								});
 							});
 						} else {
 							res.json({
 								sucess : false,
-								message : 'Invalid password'
+								errorType : 'INVALID_PWD',
+								message : 'Invalid password!'
 							});
 						}
 					} else {
 						res.json({
 							success : false,
+							errorType : 'INVALID_USR',
 							message : 'User doesn\'t exists!'
 						});
 					}
@@ -160,7 +164,7 @@ module.exports = {
 			} else {
 
 				if (user) {
-					user.password = req.body.confirmPassword;
+					user.password = req.body.password;
 					
 					user.save(function(err) {
 						if (err) {

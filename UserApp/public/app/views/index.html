@@ -5,18 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>User Maintenance | Login</title>
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="lib/angular-bootstrap/ui-bootstrap-csp.css"> -->
 	<link rel="stylesheet" type="text/css" href="app/assets/css/style.css">
 	<script src="lib/angular/angular.min.js"></script>
 	<script src="lib/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="lib/jquery/dist/jquery.min.js"></script>
 </head>
+
 <body>
-
-<section ng-view></section>
-
+	<section ng-view></section>
 </body>
 
 <script src="app/app.js"></script>
 <script src="app/app.router.js"></script>
 <script src="app/controllers/login.controller.js"></script>
+<script src="app/services/user.service.js"></script>
+
 </html>

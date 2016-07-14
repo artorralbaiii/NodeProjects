@@ -5,7 +5,13 @@ angular.module('appRoutes', ['ngRoute'])
 				templateUrl : 'app/views/pages/login.page.html',
 				controller : 'loginController',
 				controllerAs : 'scope'				
-			});
+			})
+
+			.when('/user_profile', {
+				templateUrl : 'app/views/pages/profile.page.html'
+			})
+
+			.otherwise({redirectTo : '/'});
 
 		$locationProvider.html5Mode({
 			enabled : true,

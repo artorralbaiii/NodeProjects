@@ -3,27 +3,27 @@
 		<div class="col-lg-4 col-lg-offset-4 login-screen">
 			<h1>Login</h1>
 			<form name="frmLogin" novalidate>
+				
 				<div class="form-group">
-					<input class="form-control" type="email" name="email" ng-model="email" placeholder="Email" required>
-				</div>
-				<div class="form-group" ng-show="frmLogin.email.$error.required && scope.submitted">
-					<p class="form-warning">Email is required.</p>
-				</div>
-				<div class="form-group" ng-show="frmLogin.email.$invalid && !frmLogin.email.$error.required && scope.submitted">
-					<p class="form-warning">Enter valid email.</p>
-				</div>
+					<input class="form-control" type="email" name="email" ng-model="scope.user.email" placeholder="Email" required>
+				</div>			
+				
 				<div class="form-group">
-					<input class="form-control" type="password" name="password" ng-model="password" placeholder="Password" required>
-				</div>
-				<div class="form-group" ng-show="frmLogin.password.$error.required && scope.submitted">
-					<p class="form-warning">Password is required.</p>
-				</div>
+					<input class="form-control" type="password" name="password" ng-model="scope.user.password" placeholder="Password" required>
+				</div>				
+				
 				<div class="form-group">
 					<input class="form-control btn btn-primary" type="submit" 
 					       name="submit" value="Submit" 
-						   ng-click="scope.login(frmLogin.$valid);">
-				</div>	
+						   ng-click="scope.login(frmLogin);">
+				</div>
 			</form>
+			<div class="isa_error" ng-show="scope.showError">
+			   <h4><i class="fa fa-times-circle"></i>Validation</h4>
+			   <ul ng-repeat="err in scope.errorMsgs">
+			   		<li>{{err}}</li>
+			   </ul>
+			</div>
 		</div>	
 	</div>
 </div>
