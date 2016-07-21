@@ -7,8 +7,8 @@ var UserSchema = new schema({
 	fullname : {type : String, required : true},
 	employeeNum : {type : String, required : true},
 	projectName : {type : String, required : true},
-	industryId : {type : schema.Types.ObjectId, fef : 'Industry', required : true},
-	businessUnitId : {type : schema.Types.ObjectId, fef : 'BusinessUnit', required : true},
+	industryId : {type : schema.Types.ObjectId, ref : 'Industry', required : true},
+	businessUnitId : {type : schema.Types.ObjectId, ref : 'BusinessUnit', required : true},
 	password : {type : String, required : true, select : false}
 });
 

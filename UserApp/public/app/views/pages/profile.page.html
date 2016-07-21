@@ -1,1 +1,32 @@
-<h1>Profile Page</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<table class="table table-bordered table-striped">
+				<tr>
+					<td>Email</td>
+					<td>{{scope.user.email}}</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>{{scope.user.fullname}}</td>
+				</tr>
+				<tr>
+					<td>Employee Number</td>
+					<td>{{scope.user.employeeNum}}</td>
+				</tr>
+				<tr>
+					<td>Project</td>
+					<td>{{scope.user.projectName}}</td>
+				</tr>
+				<tr>
+					<td>Industry</td>
+					<td>{{scope.user.industryId.industry}}</td>
+				</tr>
+				<tr>
+					<td>Business Unit</td>
+					<td>{{scope.user.businessUnitId.businessUnit}}</td>
+				</tr>
+			</table>
+		</div>	
+	</div>
+</div>

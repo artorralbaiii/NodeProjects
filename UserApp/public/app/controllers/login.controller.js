@@ -14,7 +14,7 @@ angular.module('loginController', [])
 					.success(function(data){
 
 						if (data.success) {
-							$location.path('/user_profile');
+							$location.path('/user_profile').search({id : data.id});
 						} else {
 							vm.errorMsgs.push(data.message);
 							vm.showError = true;

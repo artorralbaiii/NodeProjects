@@ -1,1 +1,1 @@
-angular.module('userApp',['ui.bootstrap','appRoutes','loginController','userService'])
+angular.module('userApp',['ui.bootstrap','appRoutes','loginController','userService','profileController']);

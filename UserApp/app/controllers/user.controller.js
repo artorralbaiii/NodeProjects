@@ -28,11 +28,20 @@ module.exports = {
 			});
 		}
 
-		userMdl.findOne({_id : req.params.id}, function(err, doc){
+		userMdl.findOne({_id : req.params.id})
+			   .populate('industryId', 'industry')
+			   .populate('businessUnitId', 'businessUnit')
+			   .exec(function(err, doc){
 			if (err) {
-				res.json(err);
+				res.json({
+					success : false,
+					message : err.message
+				});
 			} else {
-				res.json(doc);
+				res.json({
+					success : true,
+					user : doc
+				});
 			}
 		});
 	},

@@ -6,9 +6,11 @@ angular.module('appRoutes', ['ngRoute'])
 				controller : 'loginController',
 				controllerAs : 'scope'				
 			})
-
 			.when('/user_profile', {
-				templateUrl : 'app/views/pages/profile.page.html'
+				templateUrl : 'app/views/pages/profile.page.html',
+				controller : 'profileController',
+				controllerAs : 'scope',
+				params : {id : null}
 			})
 
 			.otherwise({redirectTo : '/'});
